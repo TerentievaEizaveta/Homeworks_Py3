@@ -30,9 +30,11 @@ print(f"Уникальных элементов: {len(set(my_list))}")
     6
     -> 5
 '''
-
+'''
+#from math import *
 N=int(input("Размер массива: "))
 my_list=[]
+
 for i in range(N):
     a=int(input())
     my_list.append(a)
@@ -46,12 +48,13 @@ for i in range(1,N):
         current=my_list[i]
         difference=abs(my_list[i]-X)
 print(current)
-
+'''
 
 '''
 *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность.
 В случае с английским алфавитом очки распределяются так:A, E, I, O, U, L, N, S, T, R – 1 очко; 
-D, G – 2 очка; B, C, M, P – 3 очка; F, H, V, W, Y – 4 очка; K – 5 очков; J, X – 8 очков; 
+D, G – 2 очка; B, C, M, P –
+ 3 очка; F, H, V, W, Y – 4 очка; K – 5 очков; J, X – 8 очков; 
 Q, Z – 10 очков. А русские буквы оцениваются так: А, В, Е, И, Н, О, Р, С, Т – 1 очко; 
 Д, К, Л, М, П, У – 2 очка; Б, Г, Ё, Ь, Я – 3 очка; Й, Ы – 4 очка; Ж, З, Х, Ц, Ч – 5 очков; 
 Ш, Э, Ю – 8 очков; Ф, Щ, Ъ – 10 очков. 
@@ -64,3 +67,15 @@ Q, Z – 10 очков. А русские буквы оцениваются та
 ноутбук
     12
 '''
+OnePrice=('A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R' )
+TwoPrice=('D', 'G')
+ThreePrice= ('B', 'C', 'M', 'P')
+FourPrice=('F', 'H', 'V', 'W', 'Y')
+FivePrice=('K')
+EightPrice=('J', 'X')
+TenPrice=('Q','Z')
+str=input('Введите слово')
+len=len(str)
+i=0
+for i in len:
+    if str[i]==OnePrice: print(1)
