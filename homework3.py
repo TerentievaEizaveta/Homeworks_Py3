@@ -67,15 +67,21 @@ Q, Z – 10 очков. А русские буквы оцениваются та
 ноутбук
     12
 '''
-OnePrice=('A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R' )
-TwoPrice=('D', 'G')
-ThreePrice= ('B', 'C', 'M', 'P')
-FourPrice=('F', 'H', 'V', 'W', 'Y')
-FivePrice=('K')
-EightPrice=('J', 'X')
-TenPrice=('Q','Z')
-str=input('Введите слово')
-len=len(str)
-i=0
-for i in len:
-    if str[i]==OnePrice: print(1)
+OnePrice=('A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R', 'А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т')
+TwoPrice=('D', 'G',' Д', 'К', 'Л', 'М', 'П', 'У')
+ThreePrice= ('B', 'C', 'M', 'P', 'Б', 'Г', 'Ё', 'Ь', 'Я')
+FourPrice=('F', 'H', 'V', 'W', 'Y', 'Й', 'Ы')
+FivePrice=('K', 'Ж', 'З', 'Х', 'Ц', 'Ч')
+EightPrice=('J', 'X', 'Ш', 'Э', 'Ю' )
+TenPrice=('Q','Z','Ф', 'Щ','Ъ')
+s=input('Введите слово ').upper() 
+sum=0
+for i in range (len(s)):
+    if (s[i] in OnePrice) == True: sum+=1
+    if (s[i] in TwoPrice) == True: sum+=2
+    if (s[i] in ThreePrice) == True: sum+=3
+    if (s[i] in FourPrice) == True: sum+=4
+    if (s[i] in FivePrice) == True: sum+=5
+    if (s[i] in EightPrice) == True: sum+=8
+    if (s[i] in TenPrice) == True: sum+=10
+print('Количество баллов: ', sum)
